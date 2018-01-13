@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const dev = process.env.NODE_ENV !== 'production';
+const port = process.env.PORT || 4711
 const next = require('next');
 
 const app = next({ dev });
@@ -15,8 +16,8 @@ app.prepare().then(() => {
   });
 
   /* eslint-disable no-console */
-  server.listen(4711, (err) => {
+  server.listen(port, (err) => {
     if (err) throw err;
-    console.log('Server ready on http://localhost:4711');
+    console.log(`Server ready on http://localhost:${port}`);
   });
 });
