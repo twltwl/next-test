@@ -66,4 +66,4 @@ typings/
 #Other
 .next
 .vscode
-pages
+./pages
