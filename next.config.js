@@ -1,6 +1,4 @@
-module.exports = {
-  webpack: (config, { buildId, dev }) => {
-    config.resolve.symlinks = false
-    return config
-  }
-}
+const withTM = require('@weco/next-plugin-transpile-modules')
+module.exports = withTM({
+  transpileModules: ['shared']
+})
